@@ -1,0 +1,262 @@
+:root {
+  --color-logo: #95e1d3;
+  --hover-or-bottom: #f38181;
+  --header: #333;
+  --main-text: #b6b6b6;
+  --color-text: #fff;
+}
+/* в чому різниця між margin:0; та margin:0px;?  */
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* .container {
+  max-width: 1920px;
+  padding: 0px 100px;
+  margin: 0 auto;
+} */
+.container {
+  /* max-width: 1920px; */ /* коли я так закоментував, то при відближенні від сторінки, елементи будуть в центрі, чому так?*/
+  padding: 0px 20px;
+  /* чого воно не спрацювало в header */
+  /* margin:0 auto */
+  justify-content: center;
+}
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* що робити з дивними відступами на макеті? */
+.header-container {
+  display: flex;
+  padding-top: 17px;
+  padding-bottom: 80px;
+  align-items: center;
+  /*justify-content: center*/ /* чогось воно не спрацювало в container */
+}
+.logo {
+  width: 98px;
+  height: 33px;
+  color: var(--color-logo);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 630px;
+}
+.nav-ul {
+  display: flex;
+}
+.nav-li {
+  color: var(--color-logo);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* для ховера 10 пкс */
+  padding-bottom: 10px;
+}
+.nav-li:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-li:hover {
+  color: var(--hover-or-bottom);
+  border-bottom: 3px solid var(--hover-or-bottom);
+}
+/* hover */
+ {
+}
+.info-block {
+  padding-bottom: 65px;
+}
+.info-block-h2 {
+  color: var(--header);
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.info-block-h3 {
+  color: var(--header);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.info-block-hr {
+  width: 60px;
+  height: 4px;
+  background: var(--hover-or-bottom);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.benefits-section {
+  padding-bottom: 100px;
+}
+.benefits-ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 120px;
+  grid-row-gap: 100px;
+  justify-items: center;
+  justify-content: center;
+}
+.benefits-li {
+  display: flex;
+}
+.benefits-h4 {
+  width: 99.086px;
+  color: var(--header);
+  /* uppercase */
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: small-caps;
+  margin-bottom: 20px;
+}
+.benefits-p {
+  width: 275.78px;
+  height: 37px;
+  flex-shrink: 0;
+  color: var(--main-text);
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+}
+.benefits-img {
+  width: 37px;
+  height: 37px;
+  margin-right: 18px;
+}
+
+.info-p {
+  width: 1104px;
+  height: 47px;
+  flex-shrink: 0;
+  color: var(--main-text);
+  text-align: center;
+  font-family: Roboto;
+  /* саме такий font-size, бо текст не буде правильно розміщуватись */
+  font-size: 14.7px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 auto;
+}
+.second-block-img {
+  width: 380px;
+  height: 470px;
+  margin-bottom: 30px;
+}
+.second-block-h4 {
+  color: var(--header);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: all-small-caps;
+  margin-bottom: 10px;
+}
+.second-block-p {
+  color: var(--main-text);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+}
+.ul-second-block-flex {
+  display: flex;
+  justify-content: center;
+}
+.li-second-block:not(:last-child) {
+  margin-right: 30px;
+}
+.footer-block-hr {
+  margin-top: 80px;
+  width: 1200px;
+  height: 1px;
+  background: var(--main-text);
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+.footer-p {
+  color: var(--header);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer-a {
+  color: var(--hover-or-bottom);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* в чому різниця :placeholder та placeholder як атрибуту */
+.input-email {
+  width: 230px;
+  height: 39px;
+  flex-shrink: 0;
+  /* stroke це що? */
+  stroke-width: 1px;
+  stroke: var(--main-text);
+}
+.input-email::placeholder {
+  color: var(--main-text);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+}
+.input-submit {
+  width: 150px;
+  height: 40px;
+  flex-shrink: 0;
+  background: var(--color-logo);
+  color: var(--color-text);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: all-small-caps;
+}
+.form {
+  margin-left: 520px;
+}
