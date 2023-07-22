@@ -20,18 +20,12 @@ li {
 a {
   text-decoration: none;
 }
-/* .container {
-  max-width: 1920px;
-  padding: 0px 100px;
-  margin: 0 auto;
-} */
 .container {
-  /* max-width: 1920px; */ /* коли я так закоментував, то при відближенні від сторінки, елементи будуть в центрі, чому так?*/
-  padding: 0px 20px;
-  /* чого воно не спрацювало в header */
-  /* margin:0 auto */
-  justify-content: center;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
 }
+
 .container-footer {
   display: flex;
   justify-content: center;
@@ -259,4 +253,10 @@ a {
 }
 .form {
   margin-left: 520px;
+}
+/* .hr-footer {
+  margin-top: 80px;
+} */
+.second-info-block {
+  padding-bottom: 80px;
 }
