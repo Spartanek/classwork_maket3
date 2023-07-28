@@ -5,6 +5,9 @@
   --main-text: #b6b6b6;
   --color-text: #fff;
 }
+html {
+  font-size: 30px;
+}
 /* в чому різниця між margin:0; та margin:0px;?  */
 * {
   margin: 0px;
@@ -45,7 +48,7 @@ a {
   height: 33px;
   color: var(--color-logo);
   font-family: Montserrat;
-  font-size: 30px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -53,13 +56,15 @@ a {
 }
 .nav-ul {
   display: flex;
+  font-size: 14px;
+  font-weight: 400;
 }
 .nav-li {
   color: var(--color-logo);
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 1em;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 1em;
   line-height: normal;
   /* для ховера 10 пкс */
   padding-bottom: 10px;
@@ -124,7 +129,7 @@ a {
 .info-block-h3 {
   color: var(--header);
   font-family: Montserrat;
-  font-size: 30px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
