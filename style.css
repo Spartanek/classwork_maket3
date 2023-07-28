@@ -69,11 +69,45 @@ a {
 }
 .nav-li:hover {
   color: var(--hover-or-bottom);
-  border-bottom: 3px solid var(--hover-or-bottom);
 }
-/* hover */
- {
+.nav-li:hover::after {
+  content: "";
+  height: 3px;
+  display: block;
+  background: var(--hover-or-bottom);
+  margin: 0 auto;
+  margin-top: 10px;
 }
+
+.red-line1::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f38181;
+  margin: 0 auto;
+  display: block; /* чогось без цього не працює */
+}
+/* .red-line2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f38181;
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+} */ /* який з варіантів кращий? Цей чи */
+.container-for-red-line::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #f38181;
+  margin: 0 auto;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px; /* цей */
+}
+
 .info-block {
   padding-bottom: 65px;
 }
@@ -98,13 +132,7 @@ a {
   text-align: center;
   margin-bottom: 40px;
 }
-.info-block-hr {
-  width: 60px;
-  height: 4px;
-  background: var(--hover-or-bottom);
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
+
 .benefits-section {
   padding-bottom: 100px;
 }
@@ -161,6 +189,7 @@ a {
   font-weight: 400;
   line-height: normal;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 .second-block-img {
   width: 380px;
@@ -194,14 +223,7 @@ a {
 .li-second-block:not(:last-child) {
   margin-right: 30px;
 }
-.footer-block-hr {
-  margin-top: 80px;
-  width: 1200px;
-  height: 1px;
-  background: var(--main-text);
-  margin: 0 auto;
-  margin-bottom: 22px;
-}
+
 .footer-p {
   color: var(--header);
   text-align: center;
@@ -253,10 +275,27 @@ a {
 }
 .form {
   margin-left: 520px;
+  display: flex;
+  align-items: center;
 }
-/* .hr-footer {
-  margin-top: 80px;
-} */
+
 .second-info-block {
   padding-bottom: 80px;
+}
+footer::before {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  width: 1200px;
+  height: 1px;
+  margin-top: 80px;
+  background: var(--main-text);
+  margin-bottom: 10px;
+}
+input {
+  display: block;
+}
+footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
